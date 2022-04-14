@@ -26,7 +26,7 @@ begin
   END_FOR
  end;
 
- Function dot_product (n: integer ; table:Array)
+ Function dot_product (n: integer ; table:Array):boolean
  var 
   i,j: integer;
   v1,v2 : table;
