@@ -1,0 +1,50 @@
+Algorithm dot_product
+
+var
+product : integer;
+result : boolean;
+
+begin
+
+ product=0;
+
+ procedure size (var n : integer)
+ begin
+  repeat
+  write('donner le size de array = 3');
+  readln(n);
+  until (n=3);
+ end;
+
+ procedure remplir (n:integer; var table:Array)
+ var i:integer;
+ begin
+  for i:=0 to n-1 do
+  begin
+  write('Donnez 3 entiers');
+  read(table[i]);
+  END_FOR
+ end;
+
+ Function dot_product (n: integer ; table:Array)
+ var 
+  i,j: integer;
+  v1,v2 : table;
+ begin
+  for i:=0 to n-1 do
+  begin
+   for j:=0 to n-1 do
+   begin
+   product = product + (v1[i]*v2[j]);
+   END_FOR
+  END_FOR
+  if (product =0) then 
+   result = true;
+  else
+   result = false;
+  END_IF
+   return result;
+ end;
+
+end
+ 
