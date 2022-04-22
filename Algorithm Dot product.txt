@@ -11,29 +11,22 @@ begin
  procedure size (var n : integer)
  begin
   repeat
-  write('donner le size de array = 3');
+  write('donner le size de array );
   readln(n);
-  until (n=3);
+  until (n>=2);
  end;
 
- procedure remplir (n:integer; var table:Array)
- var i:integer;
- begin
-  for i:=0 to n-1 do
-  begin
-  write('Donnez 3 entiers');
-  read(table[i]);
-  END_FOR
- end;
-
- Function dot_product (n: integer ; table:Array):boolean
+ Function dot_product (n: integer ; var table1:Array, var table2:Array):boolean
  var 
   i,j: integer;
-  v1,v2 : table;
  begin
-  for i:=0 to n-1 do
+  for i:=0 to n-2 do
+  write('Donnez  entiers table1');
+  read(table1[i]);
   begin
-   for j:=0 to n-1 do
+   for j:=1 to n-1 do
+   write('Donnez  entiers table2');
+   read(table[j]);
    begin
    product = product + (v1[i]*v2[j]);
    END_FOR
@@ -45,6 +38,7 @@ begin
   END_IF
    return result;
  end;
-
+size (size_of_array)
+dot_product (size_of_array, array1, array2)
 end
  
